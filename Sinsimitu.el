@@ -1,6 +1,7 @@
 ;;; from http://blog.livedoor.jp/tek_nishi/archives/8805061.html
 
 (require 'dash)
+(require 's)
 
 (defun Ssm-hsv (r g b)
     "RGB[0.0, 1.0]からHSV[0.0, 1.0]へ変換する (SOURCE:Wikipedia)"
