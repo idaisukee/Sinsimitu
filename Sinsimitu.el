@@ -62,7 +62,7 @@
         (
             (rgb (Ssm-rgb h s v)))
         (->> rgb
-            (--map (* 256 it))
+            (--map (* 255 it))
             (-map 'floor)
             (--map (format "%x" it))
             (s-join "")
