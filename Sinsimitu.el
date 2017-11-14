@@ -61,8 +61,11 @@
     (let*
         (
             (rgb (Ssm-rgb h s v)))
-        (s-concat "#"
-            (s-join ""
-                (--map (format "%x" it) (-map 'floor (--map (* 256 it)  rgb)))))))
+        (->> rgb
+            (--map (* 256 it))
+            (-map 'floor)
+            (--map (format "%x" it))
+            (s-join "")
+            (s-concat "#"))))
 
 (provide 'Sinsimitu)
